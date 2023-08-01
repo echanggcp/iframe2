@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IFrame Switcher</title>
+    <style>
+        body{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .button-container {
+            display: flex;
+            border-color: black;
+            border-width: 2px;
+            border-bottom-width: 0;
+            border-style: solid;
+        }
+        /* CSS for custom rectangular buttons */
+        .container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20%;
+            height: 40px;
+            padding: 8px;
+            background-color: #eee;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            margin: 0;
+        }
+
+        .container:hover {
+            background-color: #ccc;
+        }
+
+        .container.selected {
+            background-color: #CA302F;
+            color: white;
+        }
+
+        /* Additional styles */
+        .my-iframe {
+            display: none;
+        }
+
+        .my-iframe.show {
+            display: block;
+            border-color: black;
+            border-width: 2px;
+            border-style: solid;
+        }
+    </style>
+    <script>
+        function showIframe(iframeId) {
+            var iframes = document.getElementsByClassName("my-iframe");
+            for (var i = 0; i < iframes.length; i++) {
+                iframes[i].classList.remove("show");
+            }
+
+            var selectedIframe = document.getElementById(iframeId);
+            selectedIframe.classList.add("show");
+
+            var containers = document.getElementsByClassName("container");
+            for (var i = 0; i < containers.length; i++) {
+                containers[i].classList.remove("selected");
+            }
+
+            var selectedContainer = document.getElementById("container-" + iframeId);
+            selectedContainer.classList.add("selected");
+        }
+    </script>
+</head>
+<body>
+    <div class="button-container">
+        <div class="container selected" id="container-iframe1" onclick="showIframe('iframe1')">
+            Employment and Office
+        </div>
+    
+        <div class="container" id="container-iframe2" onclick="showIframe('iframe2')">
+            Residents and Community
+        </div>
+    
+        <div class="container" id="container-iframe3" onclick="showIframe('iframe3')">
+            Retail
+        </div>
+    
+        <div class="container" id="container-iframe4" onclick="showIframe('iframe4')">
+            Transportation
+        </div>
+
+        <div class="container" id="container-iframe5" onclick="showIframe('iframe5')">
+            Padestrian Counts
+        </div>
+    </div>
+
+    <div class="my-iframe show" id="iframe1">
+        <div class="infogram-embed" data-id="d9014419-b72d-492d-84b6-f73b8f83137e" data-type="interactive" data-title="Employment and Office"></div><script>!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else if(!e.getElementById(n)){var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><a href="https://infogram.com/d9014419-b72d-492d-84b6-f73b8f83137e" style="color:#989898!important;text-decoration:none!important;" target="_blank">Employment and Office
+        </a><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;" target="_blank" rel="nofollow">Infogram</a></div>
+    </div>
+
+    <div class="my-iframe" id="iframe2">
+        <div class="infogram-embed" data-id="0797d5c2-8dc7-42a3-841e-9a821b9bab68" data-type="interactive" data-title="Residents and Community"></div><script>!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else if(!e.getElementById(n)){var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><a href="https://infogram.com/0797d5c2-8dc7-42a3-841e-9a821b9bab68" style="color:#989898!important;text-decoration:none!important;" target="_blank">Residents and Community</a><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;" target="_blank" rel="nofollow">Infogram</a></div>
+    </div>
+
+    <div class="my-iframe" id="iframe3">
+        <div class="infogram-embed" data-id="82cf3d08-f380-47cb-9190-f829574c3e10" data-type="interactive" data-title="Retail"></div>
+        <script>
+            !function(e,i,n,s){
+                var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];
+                if(window[t]&&window[t].initialized)window[t].process&&window[t].process();
+                else if(!e.getElementById(n)){
+                    var o=e.createElement("script");
+                    o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",
+                    d.parentNode.insertBefore(o,d)
+                }
+            }(document,0,"infogram-async");
+        </script>
+        <div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px">
+            <a href="https://infogram.com/82cf3d08-f380-47cb-9190-f829574c3e10" style="color:#989898!important;text-decoration:none!important;" target="_blank">Retail</a>
+            <br>
+            <a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;" target="_blank" rel="nofollow">Infogram</a>
+        </div>
+    </div>
+
+    <div class="my-iframe" id="iframe4">
+        <div class="infogram-embed" data-id="8aba3d4b-391b-43a1-a6cb-8bba1cf58127" data-type="interactive" data-title="Transportation"></div><script>!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else if(!e.getElementById(n)){var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><a href="https://infogram.com/8aba3d4b-391b-43a1-a6cb-8bba1cf58127" style="color:#989898!important;text-decoration:none!important;" target="_blank">Transportation</a><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;" target="_blank" rel="nofollow">Infogram</a></div>
+    </div>
+    <div class="my-iframe" id="iframe5">
+        <div class="infogram-embed" data-id="2b02c319-2e6b-4b2f-a1c3-8ffa138493e2" data-type="interactive" data-title="Padestrian Counts"></div><script>!function(e,i,n,s){var t="InfogramEmbeds",d=e.getElementsByTagName("script")[0];if(window[t]&&window[t].initialized)window[t].process&&window[t].process();else if(!e.getElementById(n)){var o=e.createElement("script");o.async=1,o.id=n,o.src="https://e.infogram.com/js/dist/embed-loader-min.js",d.parentNode.insertBefore(o,d)}}(document,0,"infogram-async");</script><div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><a href="https://infogram.com/2b02c319-2e6b-4b2f-a1c3-8ffa138493e2" style="color:#989898!important;text-decoration:none!important;" target="_blank">Padestrian Counts</a><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;" target="_blank" rel="nofollow">Infogram</a></div>
+    </div>
+</body>
+</html>
